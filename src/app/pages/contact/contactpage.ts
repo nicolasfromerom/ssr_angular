@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact-page',
@@ -6,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './contact-page.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactPage {}
+export class ContactPage implements OnInit {
+  private readonly title = inject(Title);
+
+  ngOnInit() {
+    this.title.setTitle('Contacto');
+  }
+}
