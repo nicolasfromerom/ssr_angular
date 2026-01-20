@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, effect, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 import { PokemonList } from '../../pokemons/components/pokemon-list/pokemon-list';
 import { PokemonListSkeleton } from './ui/pokemon-list-skeleton/pokemon-list-skeleton';
 import { PokemonsService } from '../../pokemons/services/pokemons';
 import { map, tap } from 'rxjs';
 import { SimplePokemon } from '../../pokemons/interfaces';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
